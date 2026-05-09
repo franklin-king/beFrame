@@ -12,6 +12,7 @@
         axios库地址: https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js
         省份数据地址: http://ajax-api.itheima.net/api/province
     -->
+    <p class="my"></p>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script>
@@ -19,6 +20,8 @@
       url: "http://ajax-api.itheima.net/api/province",
     }).then((result) => {
       console.log(result);
+      console.log(result.data.data);
+      document.querySelector(".my").innerHTML = result.data.data.join("<br>");
     });
   </script>
 </html>
